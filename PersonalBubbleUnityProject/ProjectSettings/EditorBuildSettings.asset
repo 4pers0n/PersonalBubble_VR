@@ -4,7 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Scenes/Lobby.unity
+    guid: 23eb5d455b4b5024b82fb1a06a3972f7
+  - enabled: 1
+    path: Assets/_Scenes/PlayScene.unity
+    guid: 2cf2ba08b93c6bb4da745081187fa997
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 2345ac0394b80134d9b3b77dcd58dd39,
       type: 2}
