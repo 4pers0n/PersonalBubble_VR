@@ -30,7 +30,12 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
 
     public void JoinRoom()
     {
-        PhotonNetwork.CreateRoom(_roomName);
+        RoomOptions roomOptions = new RoomOptions();
+        roomOptions.MaxPlayers = 4;
+        roomOptions.IsVisible = true;
+        roomOptions.IsOpen = true;
+
+        PhotonNetwork.JoinOrCreateRoom(_roomName, roomOptions, TypedLobby.Default);
     }
 
     public override void OnJoinedRoom()

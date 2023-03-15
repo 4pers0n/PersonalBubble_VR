@@ -20531,8 +20531,8 @@ MonoBehaviour:
   smoothing: 1
   lifetime: 0
   referenceDirection: 1
-  minDistance: 1
-  maxDistance: 2
+  minDistance: 0.4
+  maxDistance: 0.8
   minViewDegrees: 0
   maxViewDegrees: 30
   aspectV: 1
