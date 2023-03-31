@@ -10,7 +10,7 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
 
     private void Start()
     {
-        _spawnedPlayer = PhotonNetwork.Instantiate(NetworkPlayerPrefab.name, transform.position, transform.rotation);
+        _spawnedPlayer = PhotonNetwork.Instantiate(NetworkPlayerPrefab.name, transform.position, Quaternion.identity);
     }
 
     public override void OnLeftRoom()

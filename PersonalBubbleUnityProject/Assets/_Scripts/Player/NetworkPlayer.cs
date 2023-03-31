@@ -29,7 +29,6 @@ public class NetworkPlayer : MonoBehaviour
         if (_photonView.IsMine)
         {
             transform.position = _camera.position;
-            transform.rotation = _camera.rotation;
         }
     }
 
