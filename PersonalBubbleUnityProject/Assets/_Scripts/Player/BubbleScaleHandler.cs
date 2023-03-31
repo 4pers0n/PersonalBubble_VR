@@ -17,6 +17,13 @@ public class BubbleScaleHandler : MonoBehaviour
         _initialScale = _bubbleTransform.localScale;
     }
 
+    private void Start()
+    {
+        _bubbleTransform.localScale = PlayerInfoSystem.Instance.BubbleRadius * Vector3.one;
+        _bubbleTransform.gameObject.GetComponent<MeshRenderer>().enabled =
+            PlayerInfoSystem.Instance.BubbleVisibility;
+    }
+
     public void OnSliderValueUpdated(SliderEventData data)
     {
         float newValue = data.NewValue;

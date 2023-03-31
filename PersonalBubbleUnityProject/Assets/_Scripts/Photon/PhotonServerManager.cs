@@ -41,6 +41,7 @@ public class PhotonServerManager : Singleton<PhotonServerManager>
     public override void OnJoinedRoom()
     {
         base.OnJoinedRoom();
+        PlayerInfoSystem.Instance.UpdateBubbleVisibility(false);
         PhotonNetwork.LoadLevel("PlayScene");
     }
 }

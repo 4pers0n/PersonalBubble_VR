@@ -19605,6 +19605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6167e20bbb3f1a942956821f31180b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bubbleMeshRenderer: {fileID: 2882896126206363703}
 --- !u!1 &851855005
 GameObject:
   m_ObjectHideFlags: 0
@@ -46287,6 +46288,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32ce45b0f39f1444dbb8d66a6a77ec15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &2882896126206363703 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3017697591005837921, guid: 43a6e514e72d2104caf89982d65b6440,
+    type: 3}
+  m_PrefabInstance: {fileID: 3294145597048177541}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3294145597048177541
 PrefabInstance:
   m_ObjectHideFlags: 0

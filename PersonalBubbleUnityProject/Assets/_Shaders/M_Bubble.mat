@@ -53,7 +53,7 @@ Material:
     - _Blend: 0
     - _CastShadows: 0
     - _Cull: 2
-    - _Cutoff_Efect_Offset: 0.26
+    - _Cutoff_Efect_Offset: 0.55
     - _DstBlend: 0
     - _Float: 0.32
     - _Fresnel_Power: 3.66
