@@ -35,6 +35,22 @@ public class NetworkPlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Hit");
+        if (other.gameObject.CompareTag("Player"))
+        {
+            foreach (var item in other.gameObject.GetComponentsInChildren<Renderer>())
+            {
+                item.enabled = false;
+            }
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            foreach (var item in other.gameObject.GetComponentsInChildren<Renderer>())
+            {
+                item.enabled = true;
+            }
+        }
     }
 }

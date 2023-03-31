@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class BubbleScaleHandler : MonoBehaviour
 {
-    [SerializeField] private PlayerInfo Player;
     [Range(0f, 1f)] [SerializeField] private float Cutoff = 0.1f;
     [SerializeField] private float SliderToScaleMultiplier = 2f;
 
@@ -25,7 +24,6 @@ public class BubbleScaleHandler : MonoBehaviour
             _bubbleTransform.localScale = Vector3.zero;
         else 
             _bubbleTransform.localScale = newValue * SliderToScaleMultiplier * _initialScale;
-
-        Player.UpdateBubbleScale(_bubbleTransform.localScale);
+        PlayerInfoSystem.Instance.UpdateBubbleRadius(_bubbleTransform.localScale.x);
     }
 }
