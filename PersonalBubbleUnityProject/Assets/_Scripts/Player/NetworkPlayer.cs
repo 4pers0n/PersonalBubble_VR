@@ -32,4 +32,9 @@ public class NetworkPlayer : MonoBehaviour
             transform.rotation = _camera.rotation;
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Hit");
+    }
 }
