@@ -6,19 +6,30 @@ using Photon.Pun;
 public class NetworkPlayer : MonoBehaviour
 {
     private PhotonView _photonView;
+    private Transform _camera;
 
     void Start()
     {
+        _camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>();
+
+        transform.parent = GameObject.Find("Players").transform;
         _photonView = GetComponent<PhotonView>();
         if (_photonView.IsMine)
         {
-            transform.parent = GameObject.FindWithTag("MainCamera").transform;
+            
             foreach (var item in GetComponentsInChildren<Renderer>())
             {
                 item.enabled = false;
             }
         }
-        else
-            transform.parent = GameObject.Find("Players").transform;
+    }
+
+    private void Update()
+    {
+        if (_photonView.IsMine)
+        {
+            transform.position = _camera.position;
+            transform.rotation = _camera.rotation;
+        }
     }
 }

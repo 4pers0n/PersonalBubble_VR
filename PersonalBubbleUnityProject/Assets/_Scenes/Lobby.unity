@@ -19659,7 +19659,7 @@ GameObject:
   - component: {fileID: 851093395}
   - component: {fileID: 851093396}
   m_Layer: 0
-  m_Name: PhotonConnectManager
+  m_Name: PhotonServerManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -4,9 +4,9 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class ConnectToServer : MonoBehaviourPunCallbacks
+public class PhotonServerManager : Singleton<PhotonServerManager>
 {
-    public bool PhotonConnectionStatus = false;
+    public bool PhotonConnectionStatus { get; private set; } = false;
 
     private string _roomName = "DemoRoom";
 
