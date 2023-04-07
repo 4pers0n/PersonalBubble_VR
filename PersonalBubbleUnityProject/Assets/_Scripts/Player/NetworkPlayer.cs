@@ -7,12 +7,12 @@ public class NetworkPlayer : MonoBehaviour
 {
     private PhotonView _photonView;
     private Transform _camera;
-    private GameObject _bubble;
+    private MeshRenderer _bubble;
 
     void Start()
     {
         _camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>();
-        _bubble = GameObject.FindGameObjectWithTag("BubbleVisual");
+        _bubble = GameObject.FindGameObjectWithTag("BubbleVisual").GetComponent<MeshRenderer>();
 
         transform.parent = GameObject.Find("Players").transform;
         _photonView = GetComponent<PhotonView>();
@@ -34,7 +34,7 @@ public class NetworkPlayer : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -43,8 +43,12 @@ public class NetworkPlayer : MonoBehaviour
                 item.enabled = false;
             }
         }
+        if (other.gameObject.CompareTag("BubbleVisual"))
+        {
+            _bubble.enabled = true;
+        }
     }
-    private void OnCollisionExit(Collision other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -53,21 +57,9 @@ public class NetworkPlayer : MonoBehaviour
                 item.enabled = true;
             }
         }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("BubbleVisual"))
         {
-            _bubble.SetActive(true);
+            _bubble.enabled = false;
         }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            _bubble.SetActive(false);
-        }    
     }
 }

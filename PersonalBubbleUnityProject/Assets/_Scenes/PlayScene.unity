@@ -2885,12 +2885,12 @@ PrefabInstance:
         type: 3}
       propertyPath: <IsToggled>k__BackingField.onExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 695462550}
+      objectReference: {fileID: 0}
     - target: {fileID: 5935963046560133884, guid: 506cbd034c7d76f45b0ef11fe23b8e53,
         type: 3}
       propertyPath: <IsToggled>k__BackingField.onEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 695462550}
+      objectReference: {fileID: 0}
     - target: {fileID: 5935963046560133884, guid: 506cbd034c7d76f45b0ef11fe23b8e53,
         type: 3}
       propertyPath: <IsToggled>k__BackingField.onExited.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -3795,81 +3795,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4511726206134138, guid: d7de6c400fc6dce4e847672adb026364,
     type: 3}
   m_PrefabInstance: {fileID: 695450011}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &695462549
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1016994933}
-    m_Modifications:
-    - target: {fileID: 7749366897304032112, guid: 43a6e514e72d2104caf89982d65b6440,
-        type: 3}
-      propertyPath: m_Name
-      value: Bubble Visual
-      objectReference: {fileID: 0}
-    - target: {fileID: 8562000257459513219, guid: 43a6e514e72d2104caf89982d65b6440,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8562000257459513219, guid: 43a6e514e72d2104caf89982d65b6440,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8562000257459513219, guid: 43a6e514e72d2104caf89982d65b6440,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8562000257459513219, guid: 43a6e514e72d2104caf89982d65b6440,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8562000257459513219, guid: 43a6e514e72d2104caf89982d65b6440,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8562000257459513219, guid: 43a6e514e72d2104caf89982d65b6440,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8562000257459513219, guid: 43a6e514e72d2104caf89982d65b6440,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8562000257459513219, guid: 43a6e514e72d2104caf89982d65b6440,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8562000257459513219, guid: 43a6e514e72d2104caf89982d65b6440,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8562000257459513219, guid: 43a6e514e72d2104caf89982d65b6440,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8562000257459513219, guid: 43a6e514e72d2104caf89982d65b6440,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 43a6e514e72d2104caf89982d65b6440, type: 3}
---- !u!23 &695462550 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 3017697591005837921, guid: 43a6e514e72d2104caf89982d65b6440,
-    type: 3}
-  m_PrefabInstance: {fileID: 695462549}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &750468855
 PrefabInstance:
@@ -5139,12 +5064,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!4 &1016994933 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2351505566771328526, guid: 4d7e2f87fefe0ba468719b15288b46e7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1016994929}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1016994934
 MonoBehaviour:
   m_ObjectHideFlags: 0
