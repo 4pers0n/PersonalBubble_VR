@@ -7,10 +7,12 @@ public class NetworkPlayer : MonoBehaviour
 {
     private PhotonView _photonView;
     private Transform _camera;
+    private GameObject _bubble;
 
     void Start()
     {
         _camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>();
+        _bubble = GameObject.FindGameObjectWithTag("BubbleVisual");
 
         transform.parent = GameObject.Find("Players").transform;
         _photonView = GetComponent<PhotonView>();
@@ -32,7 +34,7 @@ public class NetworkPlayer : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -42,7 +44,7 @@ public class NetworkPlayer : MonoBehaviour
             }
         }
     }
-    private void OnTriggerExit(Collider other)
+    private void OnCollisionExit(Collision other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -51,5 +53,21 @@ public class NetworkPlayer : MonoBehaviour
                 item.enabled = true;
             }
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            _bubble.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            _bubble.SetActive(false);
+        }    
     }
 }
