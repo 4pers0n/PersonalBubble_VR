@@ -45,9 +45,14 @@ public class NetworkPlayer : MonoBehaviour
         }
         if (other.gameObject.CompareTag("BubbleVisual"))
         {
-            _bubble.enabled = true;
+            GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("BubbleVisual");
+            foreach(GameObject gameObject in gameObjects)
+            {
+                gameObject.GetComponent<MeshRenderer>().enabled = true;
+            }
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -59,7 +64,11 @@ public class NetworkPlayer : MonoBehaviour
         }
         if (other.gameObject.CompareTag("BubbleVisual"))
         {
-            _bubble.enabled = false;
+            GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("BubbleVisual");
+            foreach (GameObject gameObject in gameObjects)
+            {
+                gameObject.GetComponent<MeshRenderer>().enabled = false;
+            }
         }
     }
 }
